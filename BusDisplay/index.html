@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="sv" style="background:#0b101e">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bussavgångar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="backdrop">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  <main class="screen">
+    <header class="top">
+      <div>
+        <div class="eyebrow">Avgångar från</div>
+        <h1>{{HÅLLPLATS}}</h1>
+      </div>
+      <div class="clock">
+        <div id="clock-time" class="clock-time">--:--</div>
+        <div id="clock-date" class="clock-date"></div>
+      </div>
+    </header>
+
+    <div class="road">
+      <div class="road-line"></div>
+      <div class="road-bus">
+        <svg viewBox="0 0 120 44">
+          <rect x="2" y="4" width="112" height="30" rx="8" fill="#0073b9"/>
+          <rect x="10" y="10" width="16" height="12" rx="2" fill="#e9f7fe"/>
+          <rect x="30" y="10" width="16" height="12" rx="2" fill="#e9f7fe"/>
+          <rect x="50" y="10" width="16" height="12" rx="2" fill="#e9f7fe"/>
+          <rect x="70" y="10" width="16" height="12" rx="2" fill="#e9f7fe"/>
+          <rect x="92" y="10" width="18" height="20" rx="2" fill="#e9f7fe"/>
+          <circle cx="26" cy="36" r="6" fill="#0b101e" stroke="#b3c1c5" stroke-width="3"/>
+          <circle cx="92" cy="36" r="6" fill="#0b101e" stroke="#b3c1c5" stroke-width="3"/>
+        </svg>
+      </div>
+    </div>
+
+    <section class="content">
+      <article class="hero">
+        <div class="hero-label">Nästa buss</div>
+        {{NÄSTA}}
+      </article>
+
+      <section class="list">
+        <div class="list-head">
+          <span>Linje</span>
+          <span>Mot</span>
+          <span>Läge</span>
+          <span>Avgår</span>
+          <span class="right">Om</span>
+        </div>
+        <div class="rows">
+          {{AVGÅNGAR}}
+        </div>
+      </section>
+    </section>
+
+    <footer class="bottom">
+      <span id="updated"></span>
+      <span class="live-pill"><span class="live-dot"></span>Realtid · Data från Länstrafiken Örebro</span>
+    </footer>
+  </main>
+
+  <script>
+    const pad = n => String(n).padStart(2, "0");
+
+    function tick() {
+      const now = new Date();
+      document.getElementById("clock-time").innerHTML = pad(now.getHours()) + '<span class="colon">:</span>' + pad(now.getMinutes());
+      document.getElementById("clock-date").textContent = now.toLocaleDateString("sv-SE", { weekday: "long", day: "numeric", month: "long" });
+    }
+
+    document.getElementById("updated").textContent = "Uppdaterad " + new Date().toLocaleTimeString("sv-SE");
+    tick();
+    setInterval(tick, 1000);
+    setTimeout(() => location.reload(), 30000);
+  </script>
+</body>
+</html>
