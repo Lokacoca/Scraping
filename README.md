@@ -1,6 +1,7 @@
 # Bus Display – Live Transit Board
 
-<!-- Add a screenshot here: ![Bus display](docs/screenshot.png) -->
+<img width="1554" height="941" alt="image" src="https://github.com/user-attachments/assets/7ffd3cb5-0926-416a-995d-4cdd2dc9d41d" />
+
 
 A live departure board for a high school's bus stop in Örebro, built in C# with **HTML Agility Pack**. It scrapes departure data from Länstrafiken's public stop page and turns it into a polished full-screen display, which was used on the school's screens.
 
