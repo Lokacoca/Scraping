@@ -30,10 +30,9 @@ The page **reloads itself every 30 seconds**, which makes the server run the scr
 
 ## Design
 
-Since it ran on the school's screens, I focused on making it **visually pleasing** and easy to read from a distance:
+Since it ran on the school's screens, I focused on making it visually pleasing and easy to read from a distance:
 
-- Dark, full-screen layout with softly drifting background shapes
-- A large "Next bus" card, with the other departures in a list underneath
+- A large "Next bus" card to display the most relevant time, with the other departures in a list underneath
 - A live clock and date that update every second
 - A bus that drives along a road line at the top of the screen
 - A real-time indicator on departures that use live data
