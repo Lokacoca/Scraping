@@ -11,7 +11,7 @@ The main goal was to **experiment with web scraping**. I tried two different too
 
 | Tool | Experience |
 |---|---|
-| **Selenium** | Works, but drives a full browser, which is more than this project needs |
+| **Selenium** | Works, but drives a full browser. Consumes unnecessary compute and takes longer for simple tasks. not fit for this project |
 | **HTML Agility Pack** | Much better for my purpose: it parses the page's HTML directly, is lightweight, and the departure data is already in the HTML |
 
 HTML Agility Pack was the clear winner, so the final version uses it.
