@@ -1,6 +1,7 @@
 # Bus Display – Live Transit Board
 
-<img width="1554" height="941" alt="image" src="https://github.com/user-attachments/assets/7ffd3cb5-0926-416a-995d-4cdd2dc9d41d" />
+<img width="1408" height="940" alt="image" src="https://github.com/user-attachments/assets/164cfff9-3562-49c2-aeb1-fce88f861515" />
+
 
 
 A live departure board for a high school's bus stop in Örebro, built in C# with **HTML Agility Pack**. It scrapes departure data from Länstrafiken's public stop page and turns it into a polished full-screen display, which was used on the school's screens.
@@ -34,10 +35,9 @@ Since it ran on the school's screens, I focused on making it visually pleasing a
 
 - A large "Next bus" card to display the most relevant time, with the other departures in a list underneath
 - A live clock and date that update every second
-- A bus that drives along a road line at the top of the screen
 - A real-time indicator on departures that use live data
 - Delayed departures show the original time crossed out
-- Departures leaving within 3 minutes are highlighted
+- Departures leaving within 3 minutes are highlighted with orange for better visibility/urgency
 
 ## Tech stack
 
