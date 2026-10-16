@@ -4,11 +4,11 @@
 
 
 
-A live departure board for a high school's bus stop in Örebro, built in C# with **HTML Agility Pack**. It scrapes departure data from Länstrafiken's public stop page and turns it into a polished full-screen display, which was used on the school's screens.
+A live departure board for a high school's bus stop in Örebro, built in C# with **HTML Agility Pack**. It scrapes departure data from Länstrafiken's public stop page and turns it into a full-screen display, which was used on the school's screens.
 
 ## Why I built it
 
-The main goal was to **experiment with web scraping**. I tried two different tools:
+The main goal was to experiment with web scraping API's. I tried two different tools:
 
 | Tool | Experience |
 |---|---|
@@ -27,7 +27,7 @@ HTML Agility Pack was the clear winner, so the final version uses it.
 
 ### Keeping it live
 
-The page **reloads itself every 30 seconds**, which makes the server run the scraping again. I chose this simple solution on purpose: instead of building extra code that fetches and updates the data in the background every second, the browser just refreshes and the existing code runs again. It keeps the code short and is fast enough for a bus board.
+The page reloads itself every 30 seconds, which makes the server run the scraping again. I chose this simple solution on purpose: instead of building extra code that fetches and updates the data in the background every second, the browser just refreshes and the existing code runs again. It keeps the code short and is fast enough for a bus board.
 
 ## Design
 
